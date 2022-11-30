@@ -1,4 +1,13 @@
 // I Can Win
+
+
+/* Открыть https://pastebin.com или аналогичный сервис в любом браузере
+Создать New Paste со следующими деталями:
+* Код: "Hello from WebDriver"
+
+* Paste Expiration: "10 Minutes"
+
+* Paste Name / Title: "helloweb"*/
 const {Builder, By, until} = require ('selenium-webdriver');
 
 async function ICanWin() {

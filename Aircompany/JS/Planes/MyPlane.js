@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const { Plane } = require('./plane');
 
 class MilitaryPlane extends Plane {
@@ -12,3 +13,5 @@ class MilitaryPlane extends Plane {
 }
 
 module.exports = { MilitaryPlane };
+
+

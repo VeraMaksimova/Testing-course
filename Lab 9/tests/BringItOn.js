@@ -1,5 +1,25 @@
-// Bring It On
+/*
+Открыть https://pastebin.com  или аналогичный сервис в любом браузере
+Создать New Paste со следующими деталями:
+* Код:
 
+git config --global user.name  "New Sheriff in Town"
+git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
+git push origin master --force
+* Syntax Highlighting: "Bash"
+
+* Paste Expiration: "10 Minutes"
+
+* Paste Name / Title: "how to gain dominance among developers"
+
+3. Сохранить paste и проверить следующее:
+
+* Заголовок страницы браузера соответствует Paste Name / Title
+
+* Синтаксис подвечен для bash
+
+* Проверить что код соответствует введенному в пункте 2
+ */
 const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 
@@ -49,7 +69,7 @@ git push origin master --force`);
       )
     )
     .click();
-  console.log('3 passed');
+  console.log('hello');
   // Click to choose '10 minutes'
   await driver
     .findElement(
@@ -70,7 +90,7 @@ git push origin master --force`);
     until.elementLocated(By.xpath('//button[@class="btn -big"]'), 10000)
   );
   await driver.findElement(By.xpath('//button[@class="btn -big"]')).click();
-  console.log('4 passed');
+  console.log('GoodBye');
 
   let pageTitle = await driver.getTitle().then(function (title) {
     return title;
@@ -111,8 +131,8 @@ git push origin master --force`);
   assert.strictEqual(
     pasteData,
     `git config --global user.name  "New Sheriff in Town"
-git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
-git push origin master --force`
+     git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
+    git push origin master --force`
   );
   // Close the browser
   await driver.sleep(5000);
