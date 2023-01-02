@@ -2,6 +2,8 @@ const {PageBase} = require('./PageBase.js');
 const {Builder, By, until} = require ('selenium-webdriver');
 const {My_Test_Filter} = require('./My_Test_Filter');
 
+
+//ТЕСТ КЕЙС ФИЛЬТР ПОЛЬСКОГО ЯЗЫКА
 const FilterClick = async () => {
    
     const filter = new My_Test_Filter('chrome');

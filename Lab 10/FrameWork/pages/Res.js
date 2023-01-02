@@ -2,7 +2,7 @@ const {PageBase} = require('./PageBase.js');
 const {Builder, By, until} = require ('selenium-webdriver');
 const {Mytest1} = require('./Mytest1.js')
 
-
+//ТЕСТ-КЕЙС ПОИСК
 const TestSearch = async () => {
    
 const mytest1 = new Mytest1('chrome');

@@ -1,7 +1,7 @@
 const {Builder, By, until} = require ('selenium-webdriver');
 const { PageBase } = require('./PageBase');
-
-class  Mytest1 extends PageBase{
+//Добавить в избранное
+class Page_Delet extends PageBase{
 constructor(browser){
 super(browser);
 }
@@ -17,11 +17,18 @@ super(browser);
         await this.driver.findElement(By.xpath(xpath)).sendKeys(name);  
     }
 
+    async Click_Page(xpath){
+        await this.driver.findElement(By.xpath(xpath)).click();
+    }
+
     async ClosePage(){
-        await this.driver.sleep(5000);
         await this.driver.quit();
+    }
+
+    async SleepPage(){
+        await this.driver.sleep(5000);
     }
 }
 
-module.exports.Mytest1 = Mytest1;
+module.exports.Page_Delet = Page_Delet;
 
